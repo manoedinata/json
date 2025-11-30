@@ -223,3 +223,12 @@ if(JSON_Install)
     )
     include(CPack)
 endif()
+
+# Catkin-specific content
+find_package(catkin REQUIRED)
+catkin_package(
+  INCLUDE_DIRS include
+)
+install(DIRECTORY include/
+  DESTINATION ${CATKIN_PACKAGE_INCLUDE_DESTINATION}
+)
